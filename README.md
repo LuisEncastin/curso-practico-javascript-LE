@@ -6,3 +6,9 @@ Evidencia del curso práctico de javascript de Platzi.
 - Segundo paso: Implementar las fórmulas en javascript.
 - Tercer paso: crear funciones.
 - Cuarto paso: Integrar javascript con HTML.
+
+##Taller número 2: Porcentajes y descuentos.
+- Primer paso: Definir las fórmulas.
+- Segundo paso: Implementar las fórmulas en javascript.
+- Tercer paso: crear funciones.
+- Cuarto paso: Integrar javascript con HTML.
