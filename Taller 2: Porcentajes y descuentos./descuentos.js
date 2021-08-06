@@ -105,5 +105,4 @@ const coupons = [
     } else {
       resultP.innerText = "El cupón no es válido";
     }
-  }
 }
