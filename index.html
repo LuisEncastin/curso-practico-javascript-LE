@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript practical skills.</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="figuras.css">
+    <link rel="stylesheet" href="descuentos.css">
 </head>
 <body>
-    <header>
-        <h1>
-            Javascript practical skills.
-        </h1>
-        <h2>
-            These challenges were developed as a result of the different practical workshops of Javascript in Platzi, using the next skills:
-            use of variables, work with arrays methods, functions implementation, JS integration with HTML, among others.
-        </h2>
-    </header>
-    <section id="contenedor">
+    <section id="introduction">
+        <header>
+            <h1>
+                Javascript practical skills.
+            </h1>
+            <h2>
+                These challenges were developed as a result of the different practical workshops of Javascript in Platzi, using the next skills:
+                use of variables, work with arrays methods, functions implementation, JS integration with HTML, among others.
+            </h2>
+        </header>
+    </section>
+    <section id="contenedorPrincipal">
         <div id="box--a" class="box">
             <a href="./Taller 1: figuras geométricas/figuras.html" class="box--img" id="box--img__1"></a>
             <h3>Workshop 1: Geometric figures.</h3>
@@ -33,6 +37,204 @@
             <h3>Workshop 3: Average, median and mode.</h3>
             <p>Make useful calculations with a series of numbers.</p>
         </div>
+    </section>
+    <section class="section" id="tallerUno">
+        <div id="headerTU">
+            <h1>
+                Geometric figures.
+            </h1>
+            <h2>Calculate the area and perimeter of the main geometric figures.</h2>     
+            <a href="/index.html"><button type="button">Return</button></a>
+        </div>
+        <main id="figures-container">
+            <section class="boxTU">
+                <a href="/" class="box--img" id="box--img__1"></a>
+                <h3>Calculate the area and perimeter of a square.</h3>
+                <section class="box--frame" id="cuadrado">
+                    <form action="">
+                        <label for="inputCuadrado">
+                            Write how long each side of your square is:
+                        </label>
+                        <div class="input--number"> 
+                            <label for="inputCuadrado">
+                                Side:
+                            </label>
+                            <input id="inputCuadrado" type="number" />
+                        </div>
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularPerimetroCuadrado()">
+                                Calculate the perimeter.
+                            </button>
+                            <button type="button" onclick="calcularAreaCuadrado()">
+                                Calculate the area.
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your perimeter is:</p>
+                            <div id="resultPerimeterSquare" class="answer"></div>
+                            <button type="button" id="cleanUno" onclick="cleanResultPerimeterSquare()">Restart</button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your area is:</p>
+                            <div id="resultAreaSquare" class="answer"></div>
+                            <button type="button" id="cleanDos" onclick="cleanResultAreaSquare()">Restart</button>
+                        </div>
+                    </form>
+                </section>     
+            </section>
+            <section class="boxTU">
+                <a href="/" class="box--img" id="box--img__2"></a>
+                <h3>Calculate the area and perimeter of a triangle.</h2>
+                <section class="box--frame" id="triangulo">
+                    <form action="">
+                        <label for="inputTriangulo">
+                            Write how long each side of your triangle is:
+                        </label>
+                        <span class="inputs--containers">
+                            <div class="input--number">
+                                <label for="inputTrianguloLado1">
+                                    Side 1: 
+                                </label>
+                                <input id="inputTrianguloLado1" type="number" />
+                            </div>
+                            <div class="input--number">
+                                <label for="inputTrianguloLado2">
+                                    Side 2: 
+                                </label>
+                                <input id="inputTrianguloLado2" type="number" />
+                            </div>
+                        </span>
+                        <span class="inputs--containers">
+                            <div class="input--number">
+                                <label for="inputTrianguloBase">
+                                    Base:
+                                </label>
+                                <input id="inputTrianguloBase" type="number" />
+                            </div>
+                            <div class="input--number">
+                                <label for="inputTrianguloAltura">
+                                    Height:
+                                </label>
+                                <input id="inputTrianguloAltura" type="number" />
+                            </div>
+                        </span>
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularPerimetroTriangulo()">
+                                Calculate the perimeter.
+                            </button>
+                            <button type="button" onclick="calcularAreaTriangulo()">
+                                Calculate the area.
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your perimeter is:</p>
+                            <div id="resultPerimeterTriangle" class="answer"></div>
+                            <button type="button" id="cleanTres" onclick="cleanResultPerimeterTriangle()">Restart</button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your area is:</p>
+                            <div id="resultAreaTriangle" class="answer"></div>
+                            <button type="button" id="cleanCuatro" onclick="cleanResultAreaTriangle()">Restart</button>
+                        </div>
+                    </form>
+                </section>   
+            </section>
+            <section class="boxTU">
+                <a href="/" class="box--img" id="box--img__3"></a>
+                <h3>Calculate the area and perimeter of a circle.</h3>
+                <section class="box--frame" id="circulo">
+                    <form action="">
+                        <label for="inputCirculo">
+                            Write how long each side of your circle is:
+                        </label>
+                        <div class="input--number"> 
+                            <label for="inputCirculo">
+                                Radio:
+                            </label>
+                            <input id="inputCirculo" type="number"/>
+                        </div>
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularPerimetroCirculo()">
+                                Calculate the perimeter.
+                            </button>
+                            <button type="button" onclick="calcularAreaCirculo()">
+                                Calculate the area.
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your perimeter is:</p>
+                            <div id="resultPerimeterCircle" class="answer"></div>
+                            <button type="button" id="cleanCinco" onclick="cleanResultPerimeterCircle()">Restart</button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your area is:</p>
+                            <div id="resultAreaCircle" class="answer"></div>
+                            <button type="button" id="cleanSeis" onclick="cleanResultAreaCircle()">Restart</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </main>
+        <script src="/Taller 1: figuras geométricas/figuras.js"></script>
+    </section>
+    <section class="section" id="tallerDos">
+        <div id="headerTD">
+            <h1>
+                Discounts and percentages.
+            </h1>
+            <h2>
+                Calculate the discounted price of a product.
+            </h2>
+            <a href="/index.html"><button type="button">Return</button></a>
+        </div>
+        <main id="figures-container">
+            <section class="boxTD">
+                <a href="/" class="box--img" id="box--img__3"></a>
+                <h3>Calcula el precio a pagar de tus productos con descuento.</h3>
+                <form action="">
+                    <div>
+                        <label for="inputPrice">Introduce the price of your product.</label>
+                        <input id="inputPrice" type="number"/>
+                    </div>
+                    
+                    <div>
+                        <label for="inputDiscount">Introduce the desired discount:</label>
+                        <input id="inputDiscount" type="number"/>
+                    </div>
+                    <div id="inputCouponContainer">
+                        <label for="inputCoupon">Or introduce the name of a coupon:</label>
+                        <input id="inputCoupon" type="text"/>
+                    </div>
+                    <div class="buttons-container">
+                        <button type="button" onclick="onClickButtonPriceDiscount()" id="buttonPriceDiscount">
+                            Calculate the price with discount.
+                        </button>
+                        <button type="button" onclick="calculateCouponDiscount()" id="buttonCouponDiscount">
+                            Use a discount coupon.
+                        </button>
+                    </div>
+                    <div class="result-container">
+                        <p>Result:</p>
+                        <div id="resultP" class="answer"></div>
+                        <button type="button" id="clean" onclick="cleanResultPriceDiscount()">Restart</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <section class="coupons-list"> 
+            <table>
+                <tr>
+                  <th>Coupon Name</th>
+                  <th>Discount</th>
+                </tr>
+                <tr><td>BLACKFRIDAY</td><td>35 %</td></tr>
+                <tr><td>CYBERMONDAY</td><td>20 %</td></tr>
+                <tr><td>SUMMERVIBES</td><td>15 %</td></tr>
+                <tr><td>CHRISTMAS</td><td>25 %</td></tr>
+                <tr><td>BIRTHDAY</td><td>50 %</td></tr>
+              </table>
+        </section>
+        <script src="./descuentos.js"></script>
     </section>
 </body>
 </html>

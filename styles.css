@@ -23,10 +23,12 @@ background-size: cover;
     color: var(--just-white);
 }
     /* Header */
-header{
+#introduction{
     width: 100%;
-    height: 15vh;
+    height: 30vh;
     padding: 30px 50px;
+}
+header{ 
     text-align: center;
 }
 h1 {
@@ -44,7 +46,9 @@ main{
     margin: 90px 0 66px 0;
 }
 
-#contenedor{
+#contenedorPrincipal{
+    width: 100%;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     padding: 0 50px;
@@ -57,15 +61,12 @@ main{
 #tallerUno{
     outline: red 2px solid;
 }
-#tallerDos{
+/* #tallerDos{
     outline: rebeccapurple 2px solid;
 }
 #tallerTres{
     outline: chartreuse 2px solid;
-}
-
-
-
+}  */
 
 .box{
     width: 100%;
@@ -78,8 +79,8 @@ main{
     background-color: var(--gray);
 }
 .box:hover{
-    flex: 1.5;
-    transition: flex 1s;
+    flex: 1.2;
+    transition: flex 1.2s;
     opacity: 1;
 }
 .box--img{
