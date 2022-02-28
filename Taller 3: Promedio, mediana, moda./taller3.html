@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean, median and mode.</title>
+
+    <link rel="stylesheet" href="./taller3.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Mean, median and mode.
+        </h1>
+        <h2>Make useful calculations with a series of numbers.</h2>     
+        <a href="/index.html"><button type="button">Return</button></a>
+    </header>
+    <main id="main-container">
+        <section id="array-container">
+            <div class="array-result-container">
+                <p>Your <b>array</b> is:</p>
+                <div id="resultArray" class="answer"></div>
+                <div class="array-buttons-container">
+                    <div class="input-array"> 
+                        <div>
+                            <label for="inputAddNumber">
+                                Add a number:
+                            </label>
+                            <input id="inputAddNumber" type="number" />
+                        </div>
+                        <button type="button" onclick="addNumber()">
+                            <b>ADD</b>
+                        </button>
+                    </div>
+                    <div class="input-array"> 
+                        <div>
+                            <label for="SubstractNumber">
+                                Substract the last number:
+                            </label>
+                        </div>
+                        <button type="button" onclick="substractNumber()">
+                            <b>SUBSTRACT</b>
+                        </button>
+                    </div>
+                    <div class="input-array"> 
+                        <div>
+                            <label for="createRandomArray">
+                                Create a random series of number:
+                            </label>
+                        </div>
+                        <button type="button" onclick="createRandomArray()">
+                            <b>CREATE</b>
+                        </button>
+                    </div>                    
+                    <button type="button" id="cleanCero" onclick="cleanArray()">Restart array</button>
+                </div>
+            </div>
+        </section>
+        <section id="figures-container">
+            <section class="box">
+                <a href="/" class="box--img" id="box--img__1"></a>
+                <h3>Calculate the mean of the array of numbers</h3>
+                <section class="box--frame" id="mean">
+                    <form action="">
+                        <div class="buttons-container">
+                            <button type="button" onclick="calculateMean(lista1)">
+                                Calculate the <b>mean</b> 
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your <b>mean</b> is:</p>
+                            <div id="resultMean" class="answer"></div>
+                            <button type="button" id="cleanMean" onclick="cleanResultMean()">Restart</button>
+                        </div>
+                    </form>
+                </section>     
+            </section>
+            <section class="box">
+                <a href="/" class="box--img" id="box--img__2"></a>
+                <h3>Calculate the median of the array of numbers.</h2>
+                <section class="box--frame" id="median">
+                    <form action="">
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularMediana(lista1)">
+                                Calculate the <b>median</b>
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your <b>median</b> is:</p>
+                            <div id="resultMedian" class="answer"></div>
+                            <button type="button" id="cleanMedian" onclick="cleanResultMedian()">Restart</button>
+                        </div>
+                    </form>
+                </section>   
+            </section>
+            <section class="box">
+                <a href="/" class="box--img" id="box--img__3"></a>
+                <h3>Calculate the mode of the array of numbers.</h3>
+                <section class="box--frame" id="mode">
+                    <form action="">
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularMode(lista1)">
+                                Calculate the <b>mode</b>
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <p>Your <b>mode</b> is:</p>
+                            <div id="resultMode" class="answer"></div>
+                            <button type="button" id="cleanMode" onclick="cleanResultMode()">Restart</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>
+<script src="./taller3.js"></script>
+</html>

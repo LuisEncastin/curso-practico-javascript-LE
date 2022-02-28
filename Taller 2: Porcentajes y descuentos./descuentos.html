@@ -5,30 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y descuentos | Curso práctico de Javascript.</title>
+    <link rel="stylesheet" href="/Taller 2: Porcentajes y descuentos./descuentos.css">
 </head>
 <body>
     <header>
         <h1>
-            Porcentajes y descuentos.
+            Discounts and percentages.
         </h1>
-        <p>
-            Este es el segundo taller del curso práctico de javascript.
-        </p>
-    </header>
-    <section>
         <h2>
-            Calcula el precio a pagar de tus productos con descuento.
+            Calculate the discounted price of a product.
         </h2>
-        <form action="">
-            <label for="inputPrice">Escribe el precio de tu producto.</label>
-            <input id="inputPrice" type="number"/>
-            <label for="inputDiscount">Escribe el descuento de tu producto:</label>
-            <input id="inputDiscount" type="number"/>
-            <button type="button" onclick="onClickButtonPriceDiscount()">
-                Calcular el precio con descuento.
-            </button>
-            <p id="ResultP"></p>
-        </form>
+        <a href="/index.html"><button type="button">Return</button></a>
+    </header>
+    <main id="figures-container">
+        <section class="box">
+            <a href="/" class="box--img" id="box--img__3"></a>
+            <h3>Calcula el precio a pagar de tus productos con descuento.</h3>
+            <form action="">
+                <div>
+                    <label for="inputPrice">Introduce the price of your product.</label>
+                    <input id="inputPrice" type="number"/>
+                </div>
+                
+                <div>
+                    <label for="inputDiscount">Introduce the desired discount:</label>
+                    <input id="inputDiscount" type="number"/>
+                </div>
+                <div id="inputCouponContainer">
+                    <label for="inputCoupon">Or introduce the name of a coupon:</label>
+                    <input id="inputCoupon" type="text"/>
+                </div>
+                <div class="buttons-container">
+                    <button type="button" onclick="onClickButtonPriceDiscount()" id="buttonPriceDiscount">
+                        Calculate the price with discount.
+                    </button>
+                    <button type="button" onclick="calculateCouponDiscount()" id="buttonCouponDiscount">
+                        Use a discount coupon.
+                    </button>
+                </div>
+                <div class="result-container">
+                    <p>Result:</p>
+                    <div id="resultP" class="answer"></div>
+                    <button type="button" id="clean" onclick="cleanResultPriceDiscount()">Restart</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <section class="coupons-list"> 
+        <table>
+            <tr>
+              <th>Coupon Name</th>
+              <th>Discount</th>
+            </tr>
+            <tr><td>BLACKFRIDAY</td><td>35 %</td></tr>
+            <tr><td>CYBERMONDAY</td><td>20 %</td></tr>
+            <tr><td>SUMMERVIBES</td><td>15 %</td></tr>
+            <tr><td>CHRISTMAS</td><td>25 %</td></tr>
+            <tr><td>BIRTHDAY</td><td>50 %</td></tr>
+          </table>
     </section>
     <script src="./descuentos.js"></script>
 </body>
